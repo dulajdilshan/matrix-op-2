@@ -1,0 +1,7 @@
+[package]
+org = "dulaj"
+name = "matrix_op_2"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
