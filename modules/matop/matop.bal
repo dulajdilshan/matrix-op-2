@@ -83,3 +83,74 @@ public function cellAvailableOptions(int len, Cell[] col) returns int[][]{
 
     return cellOptions;
 }
+
+public function genNumberArrayForeach(int length) returns int[] {
+    int[] ints = [];
+    int i = 0;
+    while (i < length) {
+        ints[ints.length()] = i;
+        i = i + 1;
+    }
+    return ints;
+}
+
+public function intersectionArrays(int[][] arr1, int[][] arr2) returns int[][]{     // Need optimization
+    int[][] inter = [];
+    int[] intsArr1 = genNumberArrayForeach(arr1.length());
+    int[] intsArr2 = genNumberArrayForeach(arr2.length());
+    foreach int i in intsArr1 {
+        int[] arr1_in = arr1[i];
+        foreach int j in intsArr2 {
+            int[] arr2_in = arr2[j];
+            if (equalArrays(arr1_in, arr2_in)) {
+                inter[inter.length()] = arr1_in;
+                break;
+            }
+        }
+    }
+    return inter;
+}
+
+public function getAvailableSpace(int width, int length, Cell[][] matrix) returns int[][]{
+    int i = 0;
+    int w =  width;
+    int[][] options = [];
+    int[][] prevOptions = [];
+    int[] goodCols = [];
+    while (i < matrix.length()) {
+        if (w == 0) {
+            return options;
+        }
+
+        int[][] cellOptions = cellAvailableOptions(length, matrix[i]);
+        
+        if (cellOptions.length() < 1) {
+            i = i + 1;
+            w = width;
+            options = [];
+            prevOptions = []; // *
+            continue;
+        }
+
+        prevOptions = cellOptions;
+
+        if (options.length() < 1) {
+            options = cellOptions;
+            i = i + 1;
+            w = w - 1;
+            continue;
+        }
+
+        // options.length() > 0 AND cellOptions.length() > 0
+        // Need to check for intersection
+        int[][] inter = intersectionArrays(options, cellOptions);
+        if (inter.length() < 1) {
+            
+        }
+
+        i = i + 1;
+        
+    }
+
+    return options;
+}

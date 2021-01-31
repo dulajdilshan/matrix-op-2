@@ -1,0 +1,36 @@
+[2021-01-31 10:47:23,639] SEVERE {b7a.log.crash} - Java heap space 
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3817)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.resizeInternalArray(ArrayValueImpl.java:957)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.ensureCapacity(ArrayValueImpl.java:1064)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.prepareForAdd(ArrayValueImpl.java:1103)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.addInt(ArrayValueImpl.java:525)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.add(ArrayValueImpl.java:423)
+	at dulaj.matrix_op_2$0046matop.0_1_0.matop.genNumberArrayForeach(matop.bal:91)
+	at dulaj.matrix_op_2.0_1_0.main.main(main.bal:17)
+	at dulaj.matrix_op_2.0_1_0.$_init.$lambda$main$(matrix_op_2)
+	at dulaj.matrix_op_2.0_1_0.$_init$$Lambda$28/0x0000000100127c40.apply(Unknown Source)
+	at io.ballerina.runtime.internal.scheduling.SchedulerItem.execute(Scheduler.java:571)
+	at io.ballerina.runtime.internal.scheduling.Scheduler.run(Scheduler.java:301)
+	at io.ballerina.runtime.internal.scheduling.Scheduler.runSafely(Scheduler.java:269)
+	at io.ballerina.runtime.internal.scheduling.Scheduler$$Lambda$24/0x00000001000e6840.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+ 
+[2021-01-31 10:47:23,654] SEVERE {b7a.log.crash} - Java heap space 
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3817)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.resizeInternalArray(ArrayValueImpl.java:957)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.ensureCapacity(ArrayValueImpl.java:1064)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.prepareForAdd(ArrayValueImpl.java:1103)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.addInt(ArrayValueImpl.java:525)
+	at io.ballerina.runtime.internal.values.ArrayValueImpl.add(ArrayValueImpl.java:423)
+	at dulaj.matrix_op_2$0046matop.0_1_0.matop.genNumberArrayForeach(matop.bal:91)
+	at dulaj.matrix_op_2.0_1_0.main.main(main.bal:17)
+	at dulaj.matrix_op_2.0_1_0.$_init.$lambda$main$(matrix_op_2)
+	at dulaj.matrix_op_2.0_1_0.$_init$$Lambda$28/0x0000000100127c40.apply(Unknown Source)
+	at io.ballerina.runtime.internal.scheduling.SchedulerItem.execute(Scheduler.java:571)
+	at io.ballerina.runtime.internal.scheduling.Scheduler.run(Scheduler.java:301)
+	at io.ballerina.runtime.internal.scheduling.Scheduler.runSafely(Scheduler.java:269)
+	at io.ballerina.runtime.internal.scheduling.Scheduler$$Lambda$24/0x00000001000e6840.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+ 
